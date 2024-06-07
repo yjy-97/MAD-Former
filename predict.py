@@ -5,8 +5,7 @@ import torch
 from PIL import Image
 from torchvision import transforms
 import matplotlib.pyplot as plt
-
-from model import convnext_tiny as create_model
+from model.MFor import MADFormer as create_model
 
 
 def main():

@@ -173,7 +173,7 @@ class MF(MADFormer):
         self.endconv = nn.Conv3d(self.embedding_dim // 32, 4, kernel_size=1)
 
 
-def MADFormer(dataset='mf', _conv_repr=True, _pe_type="learned"):
+def MADFormerModel(dataset='mf', _conv_repr=True, _pe_type="learned"):
     if dataset.lower() == 'mf':
         img_dim = 32
         num_classes = 2

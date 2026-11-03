@@ -41,7 +41,7 @@ def main():
     model = create_model(num_classes=num_classes).to(device)
     # load model weights
     model_weight_path = "./weights/best_model.pth"
-    model.load_state_dict(torch.load(model_weight_path, map_location=device))
+    model.load_state_dict(torch.load(model_weight_path, map_location=device, weights_only=True))
     model.eval()
     with torch.no_grad():
         # predict class
